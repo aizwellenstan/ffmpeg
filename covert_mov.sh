@@ -3,5 +3,5 @@ for i in *.mov; do
     # [ -f "$i" ] || break
     name=$(echo "$i" | cut -f 1 -d '.')
     echo $name
-    I:/script/bin/td/tools/ffmpeg/bin/ffmpeg.exe -i $i -qscale 0 encode/$name.mp4
+    I:/script/bin/td/tools/opensource/ImageMagick-6.8.9-Q16/ffmpeg.exe -i $i -qscale 0 -vcodec mpeg4 $name.mov -y
 done
